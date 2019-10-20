@@ -17,7 +17,7 @@ class Triangle
       rescue TriangleError => error
         puts error.message
       end
-    elsif triangle_sides.all? { |a, b|  }
+    elsif triangle_sides.all? { |a, b|  a == b}
 
     end
   end

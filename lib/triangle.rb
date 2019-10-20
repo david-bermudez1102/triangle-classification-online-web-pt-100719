@@ -15,7 +15,7 @@ class Triangle
     sides_temp = sides_temp.map{|s| s.reduce(:*)}
 
 
-    if sides_temp.all?{|s| triangle_sides.each{|triangle_side| s > triangle_side }}
+    if sides_temp.none?{|s| triangle_sides.each{|triangle_side| s > triangle_side }}
       begin
         raise TriangleError
       rescue TriangleError => error

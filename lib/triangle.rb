@@ -14,14 +14,15 @@ class Triangle
 
     if triangle_sides.combination(2).all? {|a, b| a > b }
       begin
-        raise PartnerError
-      rescue PartnerError => error
+        raise TriangleError
+      rescue TriangleError => error
         puts error.message
       end
     end
   end
 
   class TriangleError < StandardError
-    # triangle error code
+    def message
+      "Triangle wrong"
   end
 end

@@ -9,6 +9,7 @@ class Triangle
   end
 
   def kind
+    triangle_sides = [@l1,@l2,@l3]
   end
 
   class TriangleError < StandardError

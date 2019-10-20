@@ -10,6 +10,7 @@ class Triangle
 
   def kind
     triangle_sides = [@l1,@l2,@l3]
+    triangle_sides = triangle_sides.sort
   end
 
   class TriangleError < StandardError

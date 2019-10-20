@@ -10,7 +10,6 @@ class Triangle
 
   def kind
     triangle_sides = [@l1,@l2,@l3]
-    triangle_sides = triangle_sides.sort
 
     if triangle_sides.combination(2).all? {|a, b| a > b }
       begin
@@ -18,6 +17,8 @@ class Triangle
       rescue TriangleError => error
         puts error.message
       end
+    elsif triangle_sides
+
     end
   end
 

@@ -12,9 +12,7 @@ class Triangle
     triangle_sides = [@l1,@l2,@l3]
     triangle_sides = triangle_sides.sort
 
-    triangle_sides.each { |triangle_side|
-
-    }
+    triangle_sides.any? { |a,b,c| a+b > c}
   end
 
   class TriangleError < StandardError

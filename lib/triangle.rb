@@ -12,11 +12,9 @@ class Triangle
     triangle_sides = [@l1,@l2,@l3]
     sides_temp = triangle_sides.combination(2).to_a
 
-    sides_temp.map{|s|
-      s.reduce(:*)
-    }
+    sides_temp = sides_temp.map{|s| s.reduce(:*)}
 
-    sides_temp.any?{|s| triangle_sides.each{|triangle_side| s>triangle_side}}
+    sides_temp.any?{|s| triangle_sides.each{|triangle_side| s > triangle_side }}
 
       begin
         raise TriangleError

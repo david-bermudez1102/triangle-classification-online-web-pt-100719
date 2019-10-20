@@ -10,8 +10,12 @@ class Triangle
 
   def kind
     triangle_sides = [@l1,@l2,@l3]
-
-    if !triangle_sides.combination(2).inject(:*).all? {|a, b| a > b }
+    sides_temp = triangle_sides.combination(2).to_a
+    
+    sides_temp.map{|s|
+      s.reduce(:*)
+    }
+    
       begin
         raise TriangleError
       rescue TriangleError => error

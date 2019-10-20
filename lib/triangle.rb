@@ -14,8 +14,8 @@ class Triangle
 
     sides_temp = sides_temp.map{|s| s.reduce(:*)}
 
-    sides_temp.any?{|s| triangle_sides.each{|triangle_side| s > triangle_side }}
 
+    if !sides_temp.any?{|s| triangle_sides.each{|triangle_side| s > triangle_side }}
       begin
         raise TriangleError
       rescue TriangleError => error

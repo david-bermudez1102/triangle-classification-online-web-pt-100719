@@ -13,7 +13,7 @@ class Triangle
     triangle_sides = triangle_sides.sort
 
     number = 0
-    triangle_sides.combination(2).any? {|a, b| a == b }
+    triangle_sides.combination(2).any? {|a, b| a > b }
   end
 
   class TriangleError < StandardError

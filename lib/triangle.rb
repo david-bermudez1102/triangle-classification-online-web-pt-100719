@@ -12,7 +12,8 @@ class Triangle
     triangle_sides = [@l1,@l2,@l3]
     triangle_sides = triangle_sides.sort
 
-    triangle_sides.any? { |a,b,c| a+b > c}
+    number = 0
+    triangle_sides.combination(2).any? {|a, b| a == b }
   end
 
   class TriangleError < StandardError

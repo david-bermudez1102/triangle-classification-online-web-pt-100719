@@ -18,7 +18,7 @@ class Triangle
         puts error.message
       end
     elsif triangle_sides
-      
+
     end
   end
 

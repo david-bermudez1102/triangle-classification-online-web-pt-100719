@@ -13,6 +13,12 @@ class Triangle
     triangle_sides = triangle_sides.sort
 
     if triangle_sides.combination(2).all? {|a, b| a > b }
+      begin
+        raise PartnerError
+      rescue PartnerError => error
+        puts error.message
+      end
+    end
   end
 
   class TriangleError < StandardError

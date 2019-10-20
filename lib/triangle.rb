@@ -16,6 +16,12 @@ class Triangle
       s.reduce(:*)
     }
 
+    sides_temp.any? {|s|
+      triangle_sides.each{|triangle_side|
+
+      }
+    }
+
       begin
         raise TriangleError
       rescue TriangleError => error
